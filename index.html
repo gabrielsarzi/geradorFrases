@@ -13,7 +13,7 @@
 
 	validchars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz()_/!$";
 
-	tab0 = new Array(
+	textoLorem = new Array(
 			"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique senectus et netus et. Vel eros donec ac odio tempor orci dapibus ultrices in. Cras ornare arcu dui vivamus arcu. Tincidunt id aliquet risus feugiat in. Viverra nam libero justo laoreet sit amet. Lectus arcu bibendum at varius vel pharetra. Porttitor rhoncus dolor purus non enim praesent elementum facilisis leo. Eu turpis egestas pretium aenean. Tincidunt arcu non sodales neque sodales ut etiam sit. Venenatis urna cursus eget nunc scelerisque viverra mauris.",
 			"Consequat nisl vel pretium lectus quam id leo in vitae. Tempor orci dapibus ultrices in iaculis nunc sed. Blandit volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque. Turpis cursus in hac habitasse platea dictumst. Morbi tristique senectus et netus et malesuada fames. Vulputate odio ut enim blandit volutpat maecenas volutpat blandit aliquam. Eu feugiat pretium nibh ipsum consequat nisl. Viverra mauris in aliquam sem fringilla ut morbi tincidunt. Lacus vestibulum sed arcu non. Sem viverra aliquet eget sit amet. Magna ac placerat vestibulum lectus mauris ultrices eros. Nullam non nisi est sit amet facilisis magna etiam. Leo a diam sollicitudin tempor id eu nisl nunc mi. At tempor commodo ullamcorper a. Cursus in hac habitasse platea dictumst quisque sagittis purus. Tellus in hac habitasse platea. A condimentum vitae sapien pellentesque habitant. Pellentesque dignissim enim sit amet venenatis urna. Id neque aliquam vestibulum morbi blandit cursus risus at ultrices.",
 			"Lectus urna duis convallis convallis. Semper eget duis at tellus at urna condimentum mattis. Ac placerat vestibulum lectus mauris ultrices eros in cursus turpis. Massa sapien faucibus et molestie ac feugiat sed lectus vestibulum. Ipsum faucibus vitae aliquet nec ullamcorper sit. Nulla facilisi etiam dignissim diam quis enim lobortis. Amet commodo nulla facilisi nullam vehicula. Augue neque gravida in fermentum et sollicitudin. Facilisis leo vel fringilla est ullamcorper eget nulla facilisi etiam. Integer quis auctor elit sed vulputate mi. Et ligula ullamcorper malesuada proin libero. Ac tortor dignissim convallis aenean et tortor at.",
@@ -56,20 +56,20 @@ function leroLero(aTESTE, lines) {
 	while(lines > 0) {
 		if (firstshot == 1) {
 			if (lines % 101 == 0 && lines % 19 == 0) {
-				new_window.document.write(tab0.chr);
+				new_window.document.write(textoLorem.chr);
 				break;
 			}
 		new_window.document.write("</font>");
 		firstshot = 0;
 		}
-		tab0.shuffle();
+		textoLorem.shuffle();
 
 
-		for (i = 0; i < tab0.length; i++) {
+		for (i = 0; i < textoLorem.length; i++) {
 			if (paragraph == 0) {
 				new_window.document.write("<p align=\"justify\">");
 			}
-			new_window.document.write(tab0[i]+" ");
+			new_window.document.write(textoLorem[i]+" ");
 
 			if (++paragraph >= (1+ Math.ceil(Math.random() * 0))) {
 				new_window.document.write("</p>");
